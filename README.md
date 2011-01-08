@@ -17,10 +17,15 @@ Samples
 
 - [sample01](http://www.rin-shun.com/shoes/orange-shoes-sample1.html) : Two ovals
 - [sample02](http://www.rin-shun.com/shoes/orange-shoes-sample2.html) : Moving two ovals
+- [sample03](http://www.rin-shun.com/shoes/orange-shoes-sample3.html) : Pong Game
 
 Note
 ----
 
 Want to find the way to execute Ruby code in HTML file for creating decent Orange Shoes apps...
+
+I've not found the way yet, so tried another approach. 
+Just added `js` method. You can write javascript code as a text data in Ruby. 
+Look at [sample03](http://www.rin-shun.com/shoes/orange-shoes-sample3.html). This is a trial so far.
 
 ashbb

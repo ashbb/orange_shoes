@@ -2,14 +2,21 @@ Types = module Shoes; self end
 
 module Shoes
   HEADER =<<-EOS
-<canvas id="orangeShoes" width="600" height="500" style="border:1px solid black;"></canvas>
+<canvas id="orangeShoes" width="%d" height="%d" style="border:1px solid black;"></canvas>
 
 <script type="text/javascript" language="JavaScript">
 
 window.onload = function() {
   var canvas = document.getElementById('orangeShoes')
   var ctx = canvas.getContext("2d")
-
+  var mouseX
+  var mouseY
+  canvas.onmousemove = getMousePoint
+  function getMousePoint(evt){
+    mouseX = evt.clientX - canvas.offsetLeft
+    mouseY = evt.clientY - canvas.offsetTop
+  }
+  
   EOS
 
   FOOTER =<<-EOS
@@ -41,10 +48,12 @@ window.onload = function() {
 
   EOS
   
+  VARS = []
   INTERVALS = []
   
   MAIN =<<-EOS
-  setInterval(main, 10)
+
+  setInterval(main, %d)
   function main(){
     ctx.clearRect(0, 0, canvas.width,canvas.height)
   EOS
@@ -63,5 +72,7 @@ end
 
 require_relative 'shoes/helper_methods'
 require_relative 'shoes/basic'
+require_relative 'shoes/js'
 require_relative 'shoes/main'
 require_relative 'shoes/app'
+require_relative 'shoes/colors'

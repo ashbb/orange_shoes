@@ -1,5 +1,7 @@
 class Shoes
   class Basic
+    include Types
+
     def initialize args
       args.each do |k, v|
         instance_variable_set "@#{k}", v
@@ -14,10 +16,11 @@ class Shoes
     
     def move x, y
       @left, @top = x, y
-      Shoes::INTERVALS.push(real % [left, top, width, height])
+      INTERVALS.push(real % [fill, left, top, width, height])
     end
   end
 
   class ShapeBase < Basic; end
   class Oval < ShapeBase; end
+  class Rect < ShapeBase; end
 end
