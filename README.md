@@ -1,6 +1,8 @@
 Orange Shoes
 ============
 
+![logo icon](https://github.com/zacharyscott/orange_shoes/raw/master/static/orange_shoes-logo.png)
+
 Just a trial to traslate Shoes like app written in Ruby into HTML5 Canvas element written in JavaScript.
 
 
