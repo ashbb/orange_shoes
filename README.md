@@ -1,9 +1,12 @@
 Orange Shoes
 ============
 
-![logo icon](https://github.com/zacharyscott/orange_shoes/raw/master/static/orange_shoes-logo.png)
+![logo icon1](https://github.com/ashbb/orange_shoes/raw/master/static/orange_shoes-logo.png)
+![logo icon2](https://github.com/ashbb/orange_shoes/raw/master/static/oshoes-icon.png)
 
 Just a trial to traslate Shoes like app written in Ruby into HTML5 Canvas element written in JavaScript.
+
+Fantastic logo icons were created by [Zachary Scott](https://github.com/zacharyscott). I love them!
 
 
 Usage
