@@ -7,8 +7,10 @@ class Shoes
     app.instance_eval &blk
 
     repaint_all_by_order app
-
-    open 'orange_shoes_output.html', 'w' do |f|
+  
+    # $0 is the name of the input file
+    output = $0.gsub('.rb', '.html')
+    open output, 'w' do |f|
       f.puts HEADER % [app.width, app.height], 
         FUNCTIONS, VARS, INTERVALS, FOOTER
     end
