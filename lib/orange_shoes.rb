@@ -26,6 +26,16 @@ window.onload = function() {
 
   FUNCTIONS = []
 
+  IMAGE =<<-EOS
+  function image(source, x, y, w, h) {
+    var img = new Image();
+    img.onload = function() {
+      ctx.drawImage(img,x,y,w,h); 
+    } 
+    img.src = source;
+  }
+  EOS
+
   OVAL =<<-EOS
   function oval(c, x, y, r){
     ctx.beginPath()

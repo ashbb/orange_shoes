@@ -14,6 +14,24 @@ class Shoes
     attr_reader :width, :height, :interval
     attr_accessor :order
 
+    def image name, *attrs 
+      args = attrs.last.class == Hash ? attrs.pop : {}
+      case attrs.length
+        when 0, 1
+        when 2; args[:left], args[:top] = attrs
+        when 3; args[:left], args[:top], args[:width] = attrs
+        else args[:left], args[:top], args[:width], args[:height] = attrs
+      end
+      args = basic_attributes args 
+      args[:height] = args[:width] if args[:height].zero?
+      args[:fill] = name
+
+      FUNCTIONS.push IMAGE unless FUNCTIONS.include? IMAGE
+      args[:real] = %Q[    image("%s", %s, %s, %s, %s)] 
+      args[:app] = self
+      Image.new args
+    end
+
     def oval *attrs
       args = attrs.last.class == Hash ? attrs.pop : {}
       case attrs.length

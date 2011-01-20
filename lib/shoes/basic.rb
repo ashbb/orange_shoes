@@ -20,6 +20,7 @@ class Shoes
     end
   end
 
+  class Image < Basic; end
   class ShapeBase < Basic; end
   class Oval < ShapeBase; end
   class Rect < ShapeBase; end
