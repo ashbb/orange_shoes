@@ -23,6 +23,7 @@ Samples
 - [sample01](http://www.rin-shun.com/shoes/orange-shoes-sample1.html) : Two ovals
 - [sample02](http://www.rin-shun.com/shoes/orange-shoes-sample2.html) : Moving two ovals
 - [sample03](http://www.rin-shun.com/shoes/orange-shoes-sample3.html) : Pong Game
+- [sample04](http://zacharyscott.net/orange_shoes/samples/sample4.html) : Image Sample
 
 Note
 ----
